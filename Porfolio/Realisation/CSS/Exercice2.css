@@ -1,0 +1,30 @@
+div,section {
+    Margin:10px;
+    padding:10px;
+    Width:400px
+}
+.Container{
+    background-color: #868181;
+}
+div{
+    Width:370px
+}
+.box{
+background-color: #fff;
+border: 2px solid black;
+}
+ul{
+    list-style-type: none;
+}
+.box_highlight{
+    color:blue;
+    border:2px solid blue
+}
+.list-item{
+    color:green;
+    font-size: 14;
+    font-weight: bold;
+}
+Section~p{
+    color: red;
+}

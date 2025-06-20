@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+   <h2>Exercice 3 : Manipulation de dates</h2>
+  <input type="date" id="dateInput">
+  <div class="result">Jour : <span id="jour"></span></div>
+  <div class="result">Mois : <span id="mois"></span></div>
+  <div class="result">Année : <span id="annee"></span></div>
+  <div class="result">Différence en jours : <span id="diff"></span></div>
+   
+    <script type="text/JavaScript">
+     document.getElementById("dateInput").addEventListener("change", e => {
+      const date = new Date(e.target.value);
+      const now = new Date();
+      const diff = Math.floor((now - date) / (1000 * 3600 * 24));
+      document.getElementById("jour").textContent = date.getDate();
+      document.getElementById("mois").textContent = date.getMonth() + 1;
+      document.getElementById("annee").textContent = date.getFullYear();
+      document.getElementById("diff").textContent = diff + " jours";
+    });
+
+    </script>
+</body>
+</html>

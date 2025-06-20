@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+   <h2>Exercice 1 : Manipulation de chaînes</h2>
+  <input type="text" id="chaine" placeholder="Entrez une chaîne">
+  <div class="result">Longueur : <span id="longueur"></span></div>
+  <div class="result">3 premiers caractères : <span id="sub"></span></div>
+    <script type="text/JavaScript">
+    const input = document.getElementById("chaine");
+    input.addEventListener("input", () => {
+    const val = input.value;
+    document.getElementById("longueur").textContent = val.length;
+    document.getElementById("sub").textContent = val.substring(0, 3);
+    });
+
+    </script>
+</body>
+</html>

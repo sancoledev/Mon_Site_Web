@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <h2>Exercice 6 : Calculateur de prêt hypothécaire</h2>
+  <input type="number" id="montant" placeholder="Montant du prêt">
+  <input type="number" id="taux" placeholder="Taux d'intérêt annuel (%)">
+  <input type="number" id="duree" placeholder="Durée en années">
+  <button onclick="calculerPaiement()">Calculer</button>
+  <div class="result">Paiement mensuel : <span id="mensuel"></span></div>
+    <script type="text/javascript">
+        function calculerPaiement() {
+      const p = parseFloat(document.getElementById("montant").value);
+      const tauxAnnuel = parseFloat(document.getElementById("taux").value);
+      const duree = parseInt(document.getElementById("duree").value);
+
+      if (p <= 0 || tauxAnnuel <= 0 || duree <= 0 || isNaN(p) || isNaN(tauxAnnuel) || isNaN(duree)) {
+        alert("Veuillez remplir correctement tous les champs.");
+        return;
+      }
+      const r = tauxAnnuel / 100 / 12;
+      const n = duree * 12;
+      const mensuel = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      document.getElementById("mensuel").textContent = mensuel.toFixed(2) + " FCFA";
+    }
+    </script>
+</body>
+</html>

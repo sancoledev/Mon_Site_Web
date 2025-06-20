@@ -1,0 +1,13 @@
+   body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .result {
+      font-weight: bold;
+      color: darkgreen;
+    }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execice4</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+   <h2>Exercice 4 : Horloge en temps réel</h2>
+  <input type="text" id="horloge" readonly>
+
+    <script type="text/javascript">
+     function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+
+      const horloge = document.getElementById("horloge");
+      if (horloge) {
+        horloge.value = `${h}:${m}:${s}`;
+      }
+
+      // Relancer après 1 seconde
+      setTimeout(updateClock, 1000);
+    }
+
+    // Lancer l'horloge après chargement de la page
+    window.onload = updateClock;
+    </script>
+</body>
+</html>

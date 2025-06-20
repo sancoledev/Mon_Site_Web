@@ -1,0 +1,19 @@
+Body{
+    background-color: #aca8a8;
+}
+#P2{
+    font-weight: bold;
+}
+.P1{
+    font-style: italic ;
+    font-display: un;
+}
+.item-highlight{
+    color:rgb(84, 146, 238)
+}
+li[class^="a"]{
+background-color: #f8fa86d5;
+}
+li[class$="date"]{
+background-color: #2af118;
+}

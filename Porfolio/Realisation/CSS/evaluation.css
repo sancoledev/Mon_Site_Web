@@ -1,0 +1,39 @@
+Body{
+    width: 800px;
+    background-color: #ece9e9;
+    font: bold;
+    
+    
+}
+
+.conteneur{
+   
+    Margin: 00 10% 00 10%
+
+}
+H2{
+    text-align: center;
+
+}
+.highlight{
+    
+    color:rgb(98, 43, 250);
+    font-weight:bold;
+}
+
+ul{
+color:rgb(98, 43, 250);
+list-style: none;
+display: block;
+font-size: 12PX;
+}
+#Identifiant{
+    font-weight: bold;
+    Border: 2PX solid rgb(7, 7, 7);
+    background-color: #e9db1e;
+}
+
+.Special{
+    Border: 2PX solid rgb(7, 7, 7);
+    background-color: #ada9a9;
+}

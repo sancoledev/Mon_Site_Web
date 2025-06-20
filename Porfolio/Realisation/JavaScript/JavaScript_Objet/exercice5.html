@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+   <h2>Exercice 5 : Tableaux</h2>
+  <div class="result">Tableau : <span id="tableau"></span></div>
+  <button onclick="ajouterElement()">Ajouter 7</button>
+  <button onclick="supprimerElement(2)">Supprimer index 2</button>
+  <button onclick="trierTableau()">Trier</button>
+
+
+    <script type="text/javascript">
+   let tab = [5, 2, 9, 1];
+    document.getElementById("tableau").textContent = tab.join(", ");
+    function ajouterElement() {
+      tab.push(7);
+      document.getElementById("tableau").textContent = tab.join(", ");
+    }
+    function supprimerElement(i) {
+      tab.splice(i, 1);
+      document.getElementById("tableau").textContent = tab.join(", ");
+    }
+    function trierTableau() {
+      tab.sort((a, b) => a - b);
+      document.getElementById("tableau").textContent = tab.join(", ");
+    }
+
+    </script>
+</body>
+</html>

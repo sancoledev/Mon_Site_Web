@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Application 2 - JavaScript sans prompt ni alert</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<h2>JAVA SCRIPT EXERCICE 2</h2>
+
+<section>
+  <h3>Afficher les nombres de 0 à 10</h3>
+  <button onclick="afficherNombres()">Afficher</button>
+  <div id="result1" class="result"></div>
+</section>
+
+<section>
+  <h3>Somme des nombres de 0 à 100</h3>
+  <button onclick="afficherSomme()">Calculer la somme</button>
+  <div id="result2" class="result"></div>
+</section>
+
+<section>
+  <h3>Jeu : Deviner le nombre secret</h3>
+  <input type="number" id="guessInput" placeholder="Entrez votre essai"/>
+  <button onclick="jouer()">Vérifier</button>
+  <div id="result3" class="result"></div>
+</section>
+
+<section>
+  <h3>Calculer la suite de Fibonacci</h3>
+  <input type="number" id="fibInput" placeholder="Nombre de termes"/>
+  <button onclick="calculerFibonacci()">Calculer</button>
+  <div id="result4" class="result"></div>
+</section>
+<script src="Script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pratique JavaScript sans prompt ni alert</title>
+<link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+
+<h1>PRATIQUE JAVASCRIPT</h1>
+
+<!-- Formulaire âge -->
+<label for="ageInput">Entrez votre âge :</label>
+<input type="number" id="ageInput" min="0" />
+<button id="ageBtn">Vérifier âge</button>
+<div id="ageResult" class="result"></div>
+
+<!-- Formulaire nombre pair/impair -->
+<label for="nombreInput">Entrez un nombre :</label>
+<input type="number" id="nombreInput" />
+<button id="nombreBtn">Pair ou impair ?</button>
+<div id="nombreResult" class="result"></div>
+
+<!-- Formulaire mois -->
+<label for="moisInput">Entrez le numéro du mois (1-12) :</label>
+<input type="number" id="moisInput" min="1" max="12" />
+<button id="moisBtn">Afficher le mois</button>
+<div id="moisResult" class="result"></div>
+
+<script src="Script.js"></script>
+
+</body>
+</html>

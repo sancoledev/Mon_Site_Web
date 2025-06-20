@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+   <h2>Exercice 2 : Manipulation de nombres</h2>
+  <input type="number" id="nombre" placeholder="Entrez un nombre">
+  <div class="result">Racine carrée : <span id="racine"></span></div>
+  <div class="result">Arrondi : <span id="arrondi"></span></div>
+  <button onclick="Aleatoire()">Nombre aléatoire (1-100)</button>
+  <div class="result">Aléatoire : <span id="aleatoire"></span></div>
+  <button onclick="Aleatoire2(10, 50)">Aléatoire (10-50)</button>
+  <div class="result">Aléatoire personnalisé : <span id="aleatoire2"></span></div>
+
+<script type="text/javascript">
+        document.getElementById("nombre").addEventListener("input", e => {
+  const val = parseFloat(e.target.value);
+
+  if (!isNaN(val)) {
+    document.getElementById("racine").textContent = Math.sqrt(val).toFixed(2);
+    document.getElementById("arrondi").textContent = Math.round(val);
+  } else {
+    document.getElementById("racine").textContent = "";
+    document.getElementById("arrondi").textContent = "";
+  }
+});
+    function Aleatoire() {
+      document.getElementById("aleatoire").textContent = Math.floor(Math.random() * 100) + 1;
+    }
+    function Aleatoire2(min, max) {
+      const val = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById("aleatoire2").textContent = val;
+    }
+    </script>
+</body>
+</html>
